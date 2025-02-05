@@ -11,9 +11,9 @@ export class ToDoListComponent {
   todoTasks = input<Array<string>>([]);
   completedTasks = input<Array<string>>([]);
 
-  deleteButtonClick = output<number>();
+  deleteButtonClick = output<{ value: number; list: 'todo' | 'completed' }>();
 
-  onDeleteButtonClick(value: number) {
-    this.deleteButtonClick.emit(value);
+  onDeleteButtonClick(value: number, list: 'todo' | 'completed') {
+    this.deleteButtonClick.emit({ value, list });
   }
 }

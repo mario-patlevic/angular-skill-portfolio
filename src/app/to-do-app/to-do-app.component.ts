@@ -31,7 +31,13 @@ export class ToDoAppComponent {
     this.todoList.unshift(value);
   }
 
-  deleteTask(value: number) {
-    this.todoList.splice(value, 1);
+  deleteTask(event: { value: number; list: 'todo' | 'completed' }) {
+    const { value, list } = event;
+
+    if (list === 'todo') {
+      this.todoList.splice(value, 1);
+    } else if (list === 'completed') {
+      this.completedList.splice(value, 1);
+    }
   }
 }

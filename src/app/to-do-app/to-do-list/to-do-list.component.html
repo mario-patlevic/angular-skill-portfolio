@@ -11,9 +11,9 @@
           <mat-icon aria-hidden="false" aria-label="Complete task icon" fontIcon="task_alt"></mat-icon>
           Complete
         </button>
-        <button class="todo-task_button todo-task_button-delete" (click)="onDeleteButtonClick($index)">
+        <button class="todo-task_button todo-task_button-delete" (click)="onDeleteButtonClick($index, 'todo')">
           <mat-icon aria-hidden="false" aria-label="Delete task icon" fontIcon="delete_forever"></mat-icon>
-          Delete
+          Remove
         </button>
       </span>
     </li>
@@ -30,9 +30,9 @@
     <li class="todo-task">
       {{ task }}
       <span class="todo-task_buttons">
-        <button class="todo-task_button todo-task_button-delete" (click)="onDeleteButtonClick($index)">
+        <button class="todo-task_button todo-task_button-delete" (click)="onDeleteButtonClick($index, 'completed')">
           <mat-icon aria-hidden="false" aria-label="Delete task icon" fontIcon="delete_forever"></mat-icon>
-          Delete
+          Remove
         </button>
       </span>
     </li>
