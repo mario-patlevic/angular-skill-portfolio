@@ -1,12 +1,18 @@
 <section class="todo-tasks_wrapper">
-  <h2 class="todo-tasks-title">To-do tasks</h2>
+  <h2 class="todo-tasks-title">
+    To-do tasks
+  </h2>
   <ul class="todo-tasks-list">
     @for (task of todoTasks(); track $index) {
     <li class="todo-task">
       {{ task }}
       <span class="todo-task_buttons">
-        <button class="todo-task_button todo-task_button-complete">Complete</button>
+        <button class="todo-task_button todo-task_button-complete">
+          <mat-icon aria-hidden="false" aria-label="Complete task icon" fontIcon="task_alt"></mat-icon>
+          Complete
+        </button>
         <button class="todo-task_button todo-task_button-delete" (click)="onDeleteButtonClick($index)">
+          <mat-icon aria-hidden="false" aria-label="Delete task icon" fontIcon="delete_forever"></mat-icon>
           Delete
         </button>
       </span>

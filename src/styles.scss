@@ -5,7 +5,17 @@
 }
 
 body {
-  background-color:#100f15;
+  background-color: #100f15;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}

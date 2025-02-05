@@ -1,15 +1,7 @@
 <section class="todo-input_wrapper">
-  <input
-    type="text"
-    class="todo_input"
-    placeholder="What needs to be done?"
-    [(ngModel)]="todoInput"
-  />
-  <button
-    class="todo_add-button"
-    [disabled]="!todoInput"
-    (click)="onInputChange(todoInput)"
-  >
+  <input type="text" class="todo_input" placeholder="What needs to be done?" [(ngModel)]="todoInput" />
+  <button class="todo_add-button" [disabled]="!todoInput" (click)="onInputChange(todoInput)">
+    <mat-icon aria-hidden="false" aria-label="Add task icon" fontIcon="add" class="mr-8"></mat-icon>
     Add task
   </button>
 </section>
