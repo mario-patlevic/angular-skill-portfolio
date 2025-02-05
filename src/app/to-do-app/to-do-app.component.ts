@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ToDoInputComponent } from './to-do-input/to-do-input.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
-import { DefaultValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-to-do-app',
@@ -16,6 +15,12 @@ export class ToDoAppComponent {
     'Study and excercise coding',
     'Go out',
     'Excercise at gym',
+  ];
+
+  completedList: string[] = [
+    'Get complete button to work',
+    'Get delete button to work',
+    'Put on github',
   ];
 
   title = 'To-do app';

@@ -15,3 +15,8 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+
+.todo-lists {
+  display: flex;
+  justify-content: space-around;
+}

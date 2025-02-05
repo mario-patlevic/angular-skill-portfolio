@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ToDoListComponent {
   todoTasks = input<Array<string>>([]);
+  completedTasks = input<Array<string>>([]);
 
   deleteButtonClick = output<number>();
 
