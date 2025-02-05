@@ -5,19 +5,12 @@
     <li class="todo-task">
       {{ task }}
       <span class="todo-task_buttons">
-        <button class="todo-task_button">Complete</button>
-        <button class="todo-task_button" (click)="onDeleteClick(task, $index)">
+        <button class="todo-task_button todo-task_button-complete">Complete</button>
+        <button class="todo-task_button todo-task_button-delete" (click)="onDeleteButtonClick($index)">
           Delete
         </button>
       </span>
     </li>
     }
-    <li class="todo-task">
-      Create button functionality to remove and update task
-      <span class="todo-task_buttons">
-        <button class="todo-task_button">Complete</button>
-        <button class="todo-task_button">Delete</button>
-      </span>
-    </li>
   </ul>
 </section>

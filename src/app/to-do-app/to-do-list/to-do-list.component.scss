@@ -48,3 +48,13 @@
 .todo-task_button:hover {
   cursor: pointer;
 }
+
+.todo-task_button-complete:hover {
+  color: #65ffa3;
+  transition: color 0.2s ease-in-out;
+}
+
+.todo-task_button-delete:hover {
+  color: #ff6565;
+  transition: color 0.2s ease-in-out;
+}
