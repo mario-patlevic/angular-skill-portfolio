@@ -1,0 +1,3 @@
+<h1 class="todo-title">{{ title }}</h1>
+<app-to-do-input (todoInputChange)="updateTaskLabel($event)"></app-to-do-input>
+<app-to-do-list [todoTasks]="todoList"></app-to-do-list>

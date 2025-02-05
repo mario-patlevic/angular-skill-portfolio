@@ -1,0 +1,15 @@
+<section class="todo-input_wrapper">
+  <input
+    type="text"
+    class="todo_input"
+    placeholder="What needs to be done?"
+    [(ngModel)]="todoInput"
+  />
+  <button
+    class="todo_add-button"
+    [disabled]="!todoInput"
+    (click)="onInputChange(todoInput)"
+  >
+    Add task
+  </button>
+</section>
