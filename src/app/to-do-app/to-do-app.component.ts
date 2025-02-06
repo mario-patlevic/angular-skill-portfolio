@@ -33,6 +33,23 @@ export class ToDoAppComponent {
     this.todoList.unshift(value);
   }
 
+  inProgressTask(event: { value: number; task: string }) {
+    const { value, task } = event;
+    this.inProgressList.unshift(task);
+    this.todoList.splice(value, 1);
+  }
+
+  completeTask(event: {
+    value: number;
+    task: string;
+    list: 'todo' | 'inprogress';
+  }) {
+    const { value, task, list } = event;
+    this.todoList.splice(value, 1);
+    this.inProgressList.splice(value, 1);
+    this.completedList.unshift(task);
+  }
+
   deleteTask(event: {
     value: number;
     list: 'todo' | 'inprogress' | 'completed';

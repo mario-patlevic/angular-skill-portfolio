@@ -12,10 +12,34 @@ export class ToDoListComponent {
   inProgressTasks = input<Array<string>>([]);
   completedTasks = input<Array<string>>([]);
 
+  inProgressButtonClick = output<{
+    value: number;
+    task: string;
+    list: 'todo';
+  }>();
+
+  completeButtonClick = output<{
+    value: number;
+    task: string;
+    list: 'todo' | 'inprogress';
+  }>();
+
   deleteButtonClick = output<{
     value: number;
     list: 'todo' | 'inprogress' | 'completed';
   }>();
+
+  onInProgressButtonClick(value: number, task: string, list: 'todo') {
+    this.inProgressButtonClick.emit({ value, task, list });
+  }
+
+  onCompleteButtonClick(
+    value: number,
+    task: string,
+    list: 'todo' | 'inprogress'
+  ) {
+    this.completeButtonClick.emit({ value, task, list });
+  }
 
   onDeleteButtonClick(
     value: number,

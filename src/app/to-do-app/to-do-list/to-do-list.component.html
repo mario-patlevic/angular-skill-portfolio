@@ -8,11 +8,13 @@
     <li class="todo-task">
       {{ task }}
       <span class="todo-task_buttons">
-        <button class="todo-task_button todo-task_button-complete">
+        <button class="todo-task_button todo-task_button-complete"
+          (click)="onCompleteButtonClick($index, task, 'todo')">
           <mat-icon aria-hidden="false" aria-label="Complete task icon" fontIcon="task_alt"></mat-icon>
           Complete
         </button>
-        <button class="todo-task_button todo-task_button-in-progress">
+        <button class="todo-task_button todo-task_button-in-progress"
+          (click)="onInProgressButtonClick($index, task, 'todo')">
           <mat-icon aria-hidden="false" aria-label="In progress task icon" fontIcon="query_builder"></mat-icon>
           In progress
         </button>
@@ -37,7 +39,8 @@
     <li class="todo-task">
       {{ task }}
       <span class="todo-task_buttons">
-        <button class="todo-task_button todo-task_button-complete">
+        <button class="todo-task_button todo-task_button-complete"
+          (click)="onCompleteButtonClick($index, task, 'inprogress')">
           <mat-icon aria-hidden="false" aria-label="Complete task icon" fontIcon="task_alt"></mat-icon>
           Complete
         </button>
