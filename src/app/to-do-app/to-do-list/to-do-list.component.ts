@@ -9,11 +9,18 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ToDoListComponent {
   todoTasks = input<Array<string>>([]);
+  inProgressTasks = input<Array<string>>([]);
   completedTasks = input<Array<string>>([]);
 
-  deleteButtonClick = output<{ value: number; list: 'todo' | 'completed' }>();
+  deleteButtonClick = output<{
+    value: number;
+    list: 'todo' | 'inprogress' | 'completed';
+  }>();
 
-  onDeleteButtonClick(value: number, list: 'todo' | 'completed') {
+  onDeleteButtonClick(
+    value: number,
+    list: 'todo' | 'inprogress' | 'completed'
+  ) {
     this.deleteButtonClick.emit({ value, list });
   }
 }

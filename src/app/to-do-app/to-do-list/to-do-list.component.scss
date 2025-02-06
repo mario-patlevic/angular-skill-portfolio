@@ -1,5 +1,5 @@
 .todo-tasks_wrapper {
-  flex-basis: 40%;
+  flex-basis: 30%;
 }
 
 /* Title */
@@ -54,6 +54,11 @@
 
 .todo-task_button:hover {
   cursor: pointer;
+}
+
+.todo-task_button-in-progress:hover {
+  color: #ffcc65;
+  transition: color 0.2s ease-in-out;
 }
 
 .todo-task_button-complete:hover {

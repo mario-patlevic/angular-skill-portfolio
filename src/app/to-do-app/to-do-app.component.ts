@@ -17,6 +17,8 @@ export class ToDoAppComponent {
     'Excercise at gym',
   ];
 
+  inProgressList: string[] = ['Todo app'];
+
   completedList: string[] = [
     'Get complete button to work',
     'Get delete button to work',
@@ -31,12 +33,17 @@ export class ToDoAppComponent {
     this.todoList.unshift(value);
   }
 
-  deleteTask(event: { value: number; list: 'todo' | 'completed' }) {
+  deleteTask(event: {
+    value: number;
+    list: 'todo' | 'inprogress' | 'completed';
+  }) {
     const { value, list } = event;
 
     if (list === 'todo') {
       this.todoList.splice(value, 1);
-    } else if (list === 'completed') {
+    } else if (list === 'inprogress') {
+      this.inProgressList.splice(value, 1);
+    } else {
       this.completedList.splice(value, 1);
     }
   }
